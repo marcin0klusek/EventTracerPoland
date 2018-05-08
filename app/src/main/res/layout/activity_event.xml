@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.marcin.eventtracer.EventActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/eventTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/eventImg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/iem_sydney" />
+
+        <ImageView
+            android:id="@+id/eventVerified"
+            android:layout_width="20sp"
+            android:layout_toRightOf="@+id/eventImg"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="2sp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="20sp"
+            android:src="@drawable/verifted" />
+
+
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/eventVerified"
+            android:layout_alignParentRight="true"
+            android:gravity="left"
+            android:layout_marginLeft="5sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            tools:text="Warszawskie Dni Informatyki" />
+
+        <TextView
+            android:id="@+id/eventOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@+id/eventTitle"
+            android:layout_toRightOf="@+id/eventImg"
+            android:layout_toEndOf="@+id/eventVerified"
+            android:layout_alignStart="@+id/eventTitle"
+            android:layout_alignBottom="@+id/eventImg"
+            android:layout_alignRight="@+id/eventTitle"
+            android:textSize="8sp"
+            android:textAlignment="center"
+            android:text="Event organizer:"
+            tools:text="Event organizer: Turtle Entertainment Polska" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/eventInfo"
+        android:layout_marginTop="30sp"
+        android:layout_below="@+id/eventTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/black">
+
+        <ImageView
+            android:id="@+id/eventQR"
+            android:src="@drawable/qrcode_sample"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/adresText"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/eventQR"
+            tools:text="Street: Koszykowa 87" />
+
+        <TextView
+            android:id="@+id/cityText"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/adresText"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/eventQR"
+            android:layout_height="wrap_content"
+            tools:text="City: Warszawa"/>
+
+        <TextView
+            android:id="@+id/dateStartText"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/cityText"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/eventQR"
+            android:layout_height="wrap_content"
+            tools:text="Start date: 02.07.2018"/>
+
+        <TextView
+            android:id="@+id/dateToText"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/dateStartText"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/eventQR"
+            tools:text="End date: 02.07.2019"/>
+
+        <TextView
+            android:id="@+id/descText"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="5sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/dateToText"
+            android:layout_toLeftOf="@+id/eventQR"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@+id/bottom_shit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Description: \nJakieś znaczące wydarzenie w tym mieście, którego nie sposób ominąć. Warto zajrzeć tu chociaż na chwilę."/>
+
+        <ImageView
+            android:id="@+id/eventTicket"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@+id/eventQR"
+            android:layout_below="@+id/eventQR"
+            android:layout_toRightOf="@+id/descText"
+            android:src="@drawable/ticket" />
+
+        <ImageView
+            android:id="@+id/eventMaps"
+            android:layout_toRightOf="@+id/eventTicket"
+            android:layout_below="@+id/eventQR"
+            android:layout_alignRight="@+id/eventQR"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/google_maps"/>
+
+        <ImageView
+            android:id="@+id/eventFb"
+            android:layout_width="50dp"
+            android:layout_below="@+id/eventTicket"
+            android:layout_alignLeft="@+id/eventTicket"
+            android:layout_alignRight="@+id/eventMaps"
+            android:layout_height="50dp"
+            android:src="@drawable/fb_logo"/>
+
+        <ImageView
+            android:id="@+id/bottom_shit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/bottomgalleryrates"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

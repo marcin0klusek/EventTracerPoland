@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eventItemLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.marcin.eventtracer.EventListActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/eventListLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20sp"
+        android:src="@drawable/iem_sydney"/>
+
+    <TextView
+        android:id="@+id/eventListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/eventListLogo"
+        android:layout_alignTop="@+id/eventListLogo"
+        android:layout_marginLeft="15sp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/blue"
+        tools:text="Warszawskie Dni Informatyki"/>
+
+    <TextView
+        android:id="@+id/eventListPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventListTitle"
+        android:layout_toRightOf="@+id/eventListLogo"
+        android:layout_marginLeft="15sp"
+        android:textSize="10sp"
+        android:textColor="@color/lightBlue"
+        tools:text="Locatization: Koszykowa 86, Warszawa"/>
+
+    <TextView
+        android:id="@+id/eventListDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventListPlace"
+        android:layout_alignBottom="@+id/eventListLogo"
+        android:layout_toRightOf="@+id/eventListLogo"
+        android:layout_marginLeft="15sp"
+        android:textSize="10sp"
+        android:textColor="@color/lightBlue"
+        tools:text="Dates: 14-20.03.2018 (3 days left)"/>
+
+</RelativeLayout>

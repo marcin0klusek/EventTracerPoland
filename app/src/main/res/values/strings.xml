@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EventTracer</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="result_text_default">Please focus camera on QR Code</string>
+    <string name="upcoming">upcoming</string>
+    <string name="ongoing">ongoing</string>
+    <string name="finished">finished</string>
+</resources>
