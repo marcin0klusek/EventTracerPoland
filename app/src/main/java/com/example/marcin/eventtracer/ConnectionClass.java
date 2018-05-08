@@ -10,10 +10,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionClass {
-    String ip = "den1.mssql1.gear.host";
-    String db = "mysimpleeventdb";
-    String un = "mysimpleeventdb";
-    String pass = "Dm3tL3!5~YcZ";
+    String ip = "";
+    String db = "";
+    String un = "";
+    String pass = "";
 
     @SuppressLint("NewApi")
     public Connection CONN() {
